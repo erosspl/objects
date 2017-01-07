@@ -1,11 +1,18 @@
-function Telefon(marka, cena, kolor) {
+function Telefon(marka, cena, kolor, warranty) {
     this.marka = marka;
     this.cena = cena;
     this.kolor = kolor;
+   	this.warranty = getWarrantyCost(cena);
 }
 
+function getWarrantyCost(cena) {
+	var x = cena * 0.1;
+   	var result = cena + x;
+   	return result;
+} 
+
 Telefon.prototype.printInfo = function() {
-     console.log('Marka telefonu to ' + this.marka + ', kolor to ' + this.kolor + ', a cena to ' + this.cena + '.');
+     console.log('Marka telefonu to ' + this.marka + ', kolor to ' + this.kolor + ', a cena to ' + this.cena + '. ' +'Cena z przedłużoną gwarancją wynosi ' + this.warranty);
 }
 
 var galaxyS6 = new Telefon('Samsung', 2000, 'Szary');
