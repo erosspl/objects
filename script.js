@@ -21,7 +21,7 @@ $(function() {
   			var $column = $('<div>').addClass('column');
   			var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
   			var $columnCardList = $('<ul>').addClass('column-list');
-  			var $columnDelete = $('<button>').addClass('btn-delete').text('x');
+  			var $columnDelete = $('<button>').addClass('btn-delete').text('zamknij kolumnę');
   			var $columnAddCard = $('<button>').addClass('add-card').text('Dodaj kartę');
 
 		// PODPINANIE ODPOWIEDNICH ZDARZEŃ
@@ -59,7 +59,7 @@ $(function() {
 		this.description = description;
 		this.$element = createCard();
 
-		function createCard() {
+		function createCard(color) {
 			var $card = $('<li>').addClass('card');
 			var $cardDescription = $('<p>').addClass('card-description').text(self.description);
 			var $cardDelete = $('<button>').addClass('btn-delete').text('x');
@@ -90,11 +90,11 @@ $(function() {
 	};
 
 	function initSortable() {
-    	$('.column-card-list').sortable({
-      		connectWith: '.column-card-list',
+    	$('.column-list').sortable({
+      		connectWith: '.column-list',
       		placeholder: 'card-placeholder'
     	}).disableSelection();
-  	}
+  	};
 
   	$('.create-column')
   	.click(function(){
@@ -120,5 +120,4 @@ $(function() {
 	// DODAWANIE KART DO KOLUMN
 	todoColumn.addCard(card1);
 	doingColumn.addCard(card2);
-
 });

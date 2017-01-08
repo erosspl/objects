@@ -1,0 +1,45 @@
+*
+	border: 1px solid transparent
+	color: white
+
+body
+	.board
+		background-color: #3B3B3B
+		h1
+			text-align: center
+		button
+			display: flex
+			margin: 0 auto
+			cursor: pointer
+			background: inherit
+			text-transform: uppercase
+			padding: 10px
+			&:hover
+				color: red
+		.column-container
+			margin-top: 5px
+			display: flex
+			justify-content: space-around
+			background-color: #7C7C7C
+			ul
+				list-style-type: none
+				display: flex
+				flex-direction: column
+				justify-content: center
+				padding: 0 5px
+				.card-placeholder
+					border: 1px dashed red
+					min-height: 70px
+			.column
+				min-width: 150px
+				background-color: #494949
+				h2
+					text-align: center
+			li
+				text-align: center
+				border-radius: 5px
+				&:hover
+					background-color: white
+					border: 2px dashed red
+					p, button
+						color: black
