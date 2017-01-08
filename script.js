@@ -59,7 +59,7 @@ $(function() {
 		this.description = description;
 		this.$element = createCard();
 
-		function createCard(color) {
+		function createCard() {
 			var $card = $('<li>').addClass('card');
 			var $cardDescription = $('<p>').addClass('card-description').text(self.description);
 			var $cardDelete = $('<button>').addClass('btn-delete').text('x');
